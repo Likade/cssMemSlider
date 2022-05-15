@@ -1,0 +1,165 @@
+html, body 
+{
+  height: 100%;
+}
+  
+body 
+{
+  background:whitesmoke;
+  overflow: hidden;
+}
+  
+.center 
+{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+  
+.wrapper 
+{
+  background: #25282a;
+  display: flex;
+  grid-gap: 1em;
+  overflow: hidden;
+  width: 60vw;
+  height: 65vh;
+  max-width: 737px;
+  max-height: 432px;
+  border-radius: 5px;
+}    
+
+.inner 
+{
+  display: flex;
+  grid-gap: 1vw;
+  transition: all 1s ease-in-out;
+}
+
+  
+.card {
+  display: flex;
+  width: 60vw;
+  max-width: 737px;
+  border-radius: 0.5em;
+  flex-direction: column;
+  justify-content: flex-start;
+}  
+
+.card img {
+  border-radius: 5px;
+  display: block;
+  margin: 2vh auto 3.3vh;
+  height: 73.5%;
+  width: 94%;
+}
+
+.card div{
+  position: absolute;
+  width: 60vw;
+  height: 65vh;
+  max-width: 768px;
+  max-height: 432px;
+}
+  
+.card h1 {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0% 1.5vw auto;
+  font-weight: normal;
+}
+
+.nav 
+{
+  right: 3.1%;
+  bottom: 15%;
+  position: absolute;
+}
+
+.nav button {
+  all: unset;
+  background: #7faae8;
+  cursor: pointer;
+  margin: 0 0.125em;
+  position: relative;
+  user-select: none;
+  border-radius: 100%;
+  height: 8px;
+  width: 8px;
+}
+
+.nav button::before
+{
+  position: absolute;
+  content: '';
+  top: -4px;
+  right: -4px;
+  left: -4px;
+  bottom: -4px;
+}
+
+.nav button:hover
+{
+  background: white;
+}
+
+.active::after
+{
+  background: #25282a;
+  content: "";
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 100%;
+  height: 6.5px;
+  width: 6.5px;
+}
+  
+.navWrap{
+  position: absolute;
+  width: 60vw;
+  height: 65vh;
+  max-width: 737px;
+  max-height: 432px;
+}
+
+@media (max-width: 721px)
+{
+  .wrapper, .card{
+    max-width: 432px;
+    max-height: 360px;
+  }
+  .card img
+  {
+  margin: 2.5vh auto 9vh;
+  height: 48.5%;
+  width: 87.5%;
+  }
+  .nav {
+    right: auto;
+    bottom: auto;
+  }
+  .nav button{
+    height: 11px;
+    width: 11px;
+    margin: 0 0.2em;
+  }
+  .active::after
+  {
+    height: 8.5px;
+    width: 8.5px;
+  }
+  .card h1{
+    margin: 0% 4vw auto;
+  }
+  .navWrap
+  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
