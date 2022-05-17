@@ -33,6 +33,7 @@ body
 
 .inner 
 {
+  z-index: 1;
   display: flex;
   grid-gap: 1vw;
   transition: all 1s ease-in-out;
@@ -74,6 +75,7 @@ body
 
 .nav 
 {
+  z-index: 2;
   right: 3.1%;
   bottom: 15%;
   position: absolute;
